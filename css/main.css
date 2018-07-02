@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-repeat: no-repeat;
 }
 
@@ -20,7 +19,6 @@ section {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
 
 ul {
@@ -34,6 +32,7 @@ a {
 /* Start Header */ 
 header .container {
     padding-top: 10px;
+    overflow: hidden;
 }
 header .logo {
    padding-top: 10px; 
@@ -125,11 +124,12 @@ nav .login {
 /* Start section 1 */
 
 .sign {
-    height: 600px;;
+    height: 100%;
     background-color: #1D4E69;
     background-size: 100% 100%;
     background-image: url(../images/hero-cityscape.svg);
     border-top:2px solid #e6e6e6;
+    padding-bottom: 50px;
 }
 
 .sign .container {
@@ -196,6 +196,10 @@ nav .login {
 
 .second {
     background-color: #273547;
+    height: 100%;
+}
+.second .container {
+      overflow-x: auto;
 }
 .second .container .img {
     width: 50%;
@@ -277,9 +281,6 @@ nav .login {
         width: 90%;
         margin: 0;
     }
-    .second .container h1{
-        
-    }
     .second img {
         display: none;
     }
@@ -289,16 +290,16 @@ nav .login {
 /* End Section 2 */
 /* Start Section 3 */
 .third {
-    height: 600px;;
+    height: 100%;
     background-color: #1D4E69;
     background-size: 100% 100%;
     background-image: url(../images/npm-is-BOXES.svg);
-    
 }
 
 .third .container {
     margin-left: 10%;
     padding-top: 75px;
+    padding-bottom: 50px;
 }
 
 .third .container h1 {
@@ -343,14 +344,22 @@ nav .login {
 
 @media(max-width: 776px) {
     .third {
-        padding-top: 20%;
-        background-size: 100% 70%;
-        background-repeat: no-repeat;
-    
+        height: 100%;
+        background-size: cover;
     }
-    .third .container p {
-        width: 80%;
-        margin: 0 ;
+    .third .container {
+        height: 100%;
+    }
+    .third .container .title {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .third .container .title p{
+        width: 70%;
+    }
+    .third .container .title a{
+        width: 50%;
+        margin-top: 20px;
     }
 }
 /* End Section 3*/
@@ -407,10 +416,11 @@ nav .login {
 
 @media(max-width: 776px) {
     .fourth .container {
-        text-align: center;
+        width: 90%;
     }
-    .fourth .grid {
-        display: block;
+    .fourth .container .pic .grid {
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
 /* End section 4 */
@@ -418,11 +428,12 @@ nav .login {
 /* Start section 5 */
 .fifth {
     background-color: #273547 ;
+    height: 100%;
 }
 
 .fifth .container {
     margin-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 190px;
 }
 .fifth .container .pic {
     width: 30%;
@@ -492,7 +503,13 @@ nav .login {
 
 .sixth {
     background-color: #f7f7f7;
+    height: 100%;
 }
+
+.sixth .container {
+    width: 90%;
+}
+
 .sixth .container .title {
     text-align: center;
 }
@@ -515,11 +532,11 @@ nav .login {
 }
 
 .sixth .container .table {
-  margin-top: 40px;
+    width: 100%;
+    display: block;
 }
 
-
-.sixth .container .pricing {
+.sixth .container .table .pricing {
     border-width: 1px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -567,7 +584,7 @@ nav .login {
     font-weight: 200;
     margin-right: 20px;
 }
-.sixth .container .pricing sup {
+.sixth .container .table .pricing sup {
     font-size: 1.25rem;
     top: -.5em;
     vertical-align: baseline;
@@ -575,7 +592,7 @@ nav .login {
     
 }
 
-.sixth .container .pricing p {
+.sixth .container .table .pricing p {
     font-weight: 400;
     text-align: right;
     margin-bottom: 4rem;
@@ -585,7 +602,7 @@ nav .login {
 
 
 
-.sixth .container .pricing li {
+.sixth .container .table .pricing li {
     margin-bottom: 10px;
     display: list-item;
     width: 50%;
@@ -595,7 +612,7 @@ nav .login {
     
 }
 
-.sixth .container .pricing a {
+.sixth .container .table .pricing a {
     color: #fff;
     outline: none;
     transition: all 300ms ease-out;
@@ -614,11 +631,11 @@ nav .login {
     line-height: 1.35;
     border-radius: 20px;
 }
-.sixth .container .bottom {
-    display: block;
-    margin-top: 90%;
-}
 
+.sixth .container .bottom {
+    width: 100%;
+    margin-top: 700px;
+}
 .sixth .container .bottom h3 {
     font-size: 1.5rem;
     text-align: center;
@@ -634,14 +651,16 @@ nav .login {
 }
 
 @media(max-width: 776px) {
-    .sixth .table .pricing {
-        margin-left: 50px;
-        width: 90%;
+    .sixth .container {
+        width: 80%;
+        overflow: visible;
     }
-    .sixth .bottom {
-        display: block;
+    .sixth .container .table .pricing {
         width: 100%;
-        margin-top: 100%;
+    }
+    .sixth .container .bottom {
+        float: left;
+        margin-top: 80px;
     }
 }
 
@@ -707,56 +726,63 @@ nav .login {
 
 @media(max-width: 776px) {
     .sev .container {
-        height: 900px;
+        height: 100%;
+    }
+    .sev .container .table .grid {
+        width: 100%;
+        border-color: #fff;
     }
 }
 /* End section 7 */
 
 /* start section 8 */ 
+.eighth {
+    height: 100%;
+    margin-top: 50px;
 
+}
 .eighth .container {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    width: 90%;
     text-align: center;
+    
 }
 
 .eighth .container .grid {
-    width: 30.3333%;
-    text-align: center;
-    display: inline-table;
+    width: 33.3333%;
+    float: left;
 }
 
 .eighth .container .grid  .pic {
+    width: 30%;
     float: left;
     
 }
 
 .eighth .container .grid .text {
     text-align: left;
-    margin-left: 30%;
+    width: 60%;
+    float: right;
+    font-size: .875rem;
 }
 
 @media(max-width: 776px) {
+    .eighth {
+        height: 100%;
+    }
     .eighth .container {
-        text-align: left;
+        width: 90%
     }
-    .eighth .grid {
-        margin-right: 200px;
-        margin-bottom: 30px;
-        
-    }
-    .eighth .grid div {
+    .eighth .container .grid {
         width: 100%;
-        display:table;
+        margin-bottom: 30px;
     }
 }
+
+
 /* end section 8 */
 
 /* start section 9 */
-.nign {
-    height: 700px; 
-}
+
 .nign .container {
     width: 100%;
     text-align: center;
@@ -775,7 +801,7 @@ nav .login {
 
 .nign .container .table .grid {
     width: 30.3333%;
-    display: inline-grid;
+    display:inline-grid;
 }
 
 .nign .container .table .mid{
@@ -805,6 +831,10 @@ nav .login {
 @media(max-width: 776px) {
     .nign {
         height: 100%;
+    }
+    .nign .container .table .grid {
+        width: 100%;
+        border-color: #fff;
     }
 }
 
@@ -857,11 +887,24 @@ footer .bottom {
 footer .bottom a:hover{
     color: #cb3837;
 }
+@media (max-width: 767px)  {
+    footer {
+        height: 100%;
+    }
+    footer .container {
+        width: 90%;
+    }
+    footer .container .grid {
+        width: 100%;
+    }
+}
+
 /* end footer */
 
 @media (max-width: 767px) {/*Mobile & Tablet Rules */
     .container {
         width: 100%;
+        overflow: hidden;
     }
    
 }
